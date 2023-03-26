@@ -141,7 +141,7 @@ enableEmoji = true
   [privacy.googleAnalytics]
     disable = true
     anonymizeIP = true
-    respectDoNotTrack = false
+    respectDoNotTrack = true
   [privacy.instagram]
     disable = false
     simple = true
