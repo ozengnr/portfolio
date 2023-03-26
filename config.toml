@@ -139,7 +139,7 @@ enableEmoji = true
   [privacy.disqus]
     disable = false
   [privacy.googleAnalytics]
-    disable = true
+    disable = false
     anonymizeIP = true
     respectDoNotTrack = true
   [privacy.instagram]
