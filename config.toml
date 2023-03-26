@@ -31,6 +31,8 @@ enableEmoji = true
   orgName = "Oz Guner"
   orgLocal = "Boston, MA"
   description = "Personal portfolio website for Oz Guner"
+  # Google Analytics 4
+  googleAnalyticsID = "G-99C7LKCLRW"
   favicon = "/img/bar-chart-icon.png"
   logo = "/img/bar-chart-icon.png"
   mainSections = ["blog","contact","about"]
@@ -137,9 +139,9 @@ enableEmoji = true
   [privacy.disqus]
     disable = false
   [privacy.googleAnalytics]
-    disable = false
+    disable = true
     anonymizeIP = true
-    respectDoNotTrack = true
+    respectDoNotTrack = false
   [privacy.instagram]
     disable = false
     simple = true
