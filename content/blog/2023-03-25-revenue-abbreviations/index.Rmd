@@ -1,0 +1,120 @@
+---
+title: Revenue Abbreviations - What's the Difference?
+author: Oz Guner
+date: '2023-03-25'
+slug: revenue-abbreviations
+categories:
+  - revenue
+  - metrics
+  - class notes
+tags:
+  - arr
+  - mrr
+  - revenue
+  - cash
+  - acv
+  - tcv
+subtitle: ''
+excerpt: 'SaaS has no shortage of abbreviations to measure revenue. In the end, the whole point is to allow us to employ imperfect analysis for decision making.'
+draft: yes
+series: ~
+layout: single
+---
+
+## A Bit of History
+
+In the central forum of ancient Rome stands a Roman monument known as the *Milliarium Aureum*, or golden milestone, which was erected by Emperor Caesar Augustus. It served as the starting point for measuring all distances in the Roman Empire and was regarded as the site from which all principal roads diverged. 
+
+![Milliarium Aureum. Source: Wikimedia Commons](img/featured.jpg)
+
+## Back to Business
+
+Just as all roads led to the *Milliarium Aureum*, so too does every business eventually lead to revenue. Revenue is the ultimate destination and measurement of success for any business, and for Software-as-a-Service (SaaS) companies, there are several key revenue metrics that serve as essential markers on the road to success. In this series, we will explore these SaaS revenue metrics in detail and provide a clear understanding of what they mean and how they can be used to evaluate the performance of a SaaS business.
+
+##### Bookings
+For simplicity, we'll assume that we just built our very niche SaaS business: an inventory management system for small and mid-sized boat retailers. We picked up the phone and we seem to be about to win our first client, Swell Boats, Inc. We closed-won that opportunity in our newly built sleek CRM and we sent out an agreement to Swell. At this point, the only thing that we got is commitment to spend money. A letter of intent. An agreement. Something waiting to be signed. In the end, we recorded a **booking**. The paid version of the software and its benefits is not yet provided to the customer.
+
+##### Total Contract Value (TCV)
+The terms of this agreement, dated January 15, dictate that Swell pay $€12,000$ per year to our business upfront for 3 years. We will charge Swell an additional $€5,000$ for initial set up and training. In total, we have a $€12,000 \times 3 = €36,000$ in total bookings recurring yearly and $€5,000$ services and consulting bookings, resulting in a Total Contract Value (TCV) of 
+
+$$€36,000 + €5,000 = \underline{\underline{€41,000}}$$
+##### Annual Contract Value (ACV)
+ACV is quite literally the annualized version of any TCV. In our case, our TCV is $\€41,000$. Therefore, our ACV will be 
+$$€41,000 \div 3 = \underline{\underline{€13,667}}$$. 
+
+##### Annual Recurring Revenue (ARR)
+Another metric that is widely used but is often confused with ACV. ARR only takes the *recurring* revenue into account and naturally leaves one-off charges such as services or irregular consulting fees out. Some SaaS companies might also refer to this as "Software ACV" since annual contract value of a software would typically represent Annual Recurring Revenue. In our case, the ARR would be:
+
+$$€36,000 / 3 = \underline{\underline{€12,000}}$$.
+
+##### Monthly Recurring Revenue (MRR)
+Monthly recurring revenue shares the same characteristic as ACV in terms of its relationship to the annual metric, ARR. MRR is the monthly recurring portion of ARR. Remember that no matter in what frequency your company gets paid, you can calculate MRR by dividing the ARR in 12, or calculate ARR by multiplying MRR by 12. After all, these metrics are indicators of revenue and growth rather than the cash in the bank. In our case, the MRR would be:
+
+$$€36,000 / 3 = \underline{\underline{€12,000}}$$
+
+
+At this point, here is how that will show up in the report of our system of records. The deal was won on January 15 and will therefore be booked on January bookings with a $1200 annual contract value: 
+
+```{r table, echo=FALSE}
+# create data frame for the table
+# load required packages
+library(knitr)
+library(kableExtra)
+
+# create data frame for the table
+table_df <- data.frame(
+  Table = 'Swell Boats Inc - ACV Bookings ($)',
+  Jan = 1200,
+  Feb = 0,
+  Mar = 0,
+  Apr = 0,
+  May = 0,
+  Jun = 0,
+  Jul = 0,
+  Aug = 0,
+  Sep = 0,
+  Oct = 0,
+  Nov = 0,
+  Dec = 0
+)
+
+# display table with formatting
+kable(table_df, row.names = FALSE)
+
+
+```
+
+
+
+And this is how it would look like in our business intelligence systems (if we have one - *heh heh*):
+
+```{r bar chart, echo=FALSE}
+# create data frame
+df <- data.frame(
+  Booking_Date = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"),
+  ACV_Bookings = c(1200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+)
+
+# reorder the levels of the Booking_Date column in the data frame
+df$Booking_Date <- factor(df$Booking_Date, levels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))
+
+# plot bar chart
+library(ggplot2)
+ggplot(df, aes(x = Booking_Date, y = ACV_Bookings)) +
+  geom_bar(stat = "identity", fill = "lightblue") +
+  geom_text(aes(label = paste0("$", ACV_Bookings)), vjust = -1, size = 3, color = "black") +
+  theme(axis.line = element_blank(),
+        axis.text.x = element_text(size = 12, color = "black"),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        panel.background = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.background = element_blank()) +
+  ggtitle("ACV Bookings by Month")
+
+
+```
+
+At this point, it's important to remember that we are billing our client yearly. Typical SaaS contracts are billed annually upfront. This will result in deferred revenue balance of the amount billed. In our case,  **Therefore, our billings, no matter the frequency and the terms, will be booked on our deferred revenue.** This point is important because we have not yet recognized revenue, provided services, or received cas in the bank. If we get paid monthly, we will wind down that deferred revenue balance by $\frac{1}{12}$. 
