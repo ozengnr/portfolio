@@ -18,11 +18,11 @@ show_post_thumbnail: true
 sidebar:
   author: Oz Guner
   description: "Thoughts on data, growth, and more.\n"
-  show_sidebar_adunit: true
+  show_sidebar_adunit: false
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml
   title: A Sidebar for Your Thoughts
-thumbnail_left: true
+thumbnail_left: false
 title: Blog
 ---
 
