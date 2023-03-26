@@ -1,4 +1,4 @@
-baseURL = "https://main--ozenguner.netlify.app/"
+baseURL = "https://ozenguner.com/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Oz Guner"
