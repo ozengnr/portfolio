@@ -4,7 +4,7 @@ languageCode = "en"
 title = "Oz Guner"
 author = "Oz Guner"
 copyright = "" # set to override the auto generated copyright using org info and now year
-googleAnalytics = ""
+googleAnalytics = "G-99C7LKCLRW"
 disqusShortname = "" # see params.utterances to use utterances instead of Disqus
 metaDataFormat = "yaml"
 footnoteReturnLinkContents = "&#8617;" # ↩
@@ -32,7 +32,7 @@ enableEmoji = true
   orgLocal = "Boston, MA"
   description = "Personal portfolio website for Oz Guner"
   # Google Analytics 4
-  googleAnalyticsID = "G-99C7LKCLRW"
+  googleAnalyticsID = ""
   favicon = "/img/bar-chart-icon.png"
   logo = "/img/bar-chart-icon.png"
   mainSections = ["blog","contact","about"]
