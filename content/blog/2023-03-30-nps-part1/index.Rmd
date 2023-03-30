@@ -13,13 +13,12 @@ excerpt: 'Despite all the disadvantages, there is an important reason NPS is sti
 draft: no
 series: ~
 layout: single
-show_post_thumbnail: true
+thumbnail: '/featured.jpg'
 ---
 
 *This is a slightly altered version of my article that originally appeared on February 11, 2022 on my [Medium page.](https://medium.com/@ozengnr/nps-part1-5f4c6b1537df)*
 
 I met Net Promoter Score (NPS) survey back in summer 2020. It was my third month at The Predictive Index and I was still trying to get to speed. I’d never heard of NPS before, but when I did some research, I saw how I can apply this at my current position to help leaders make data-driven decisions.
-
 
 ### NPS: What it is
 
