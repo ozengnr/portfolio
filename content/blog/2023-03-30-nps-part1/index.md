@@ -10,7 +10,7 @@ tags:
   - operations
 subtitle: 'What it is, what it is not'
 excerpt: 'Despite all the disadvantages, there is an important reason NPS is still the leading advocacy measurement method: Your advocates give you feedback for free. '
-draft: yes
+draft: no
 series: ~
 layout: single
 ---
