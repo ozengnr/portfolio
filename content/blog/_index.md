@@ -10,7 +10,7 @@ cascade:
     text_link_label: View recent posts
     text_link_url: /blog/
 description: "Thoughts on data, growth, and more.\n"
-layout: list
+
 show_author_byline: true
 show_button_links: false
 show_post_date: true
