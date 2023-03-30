@@ -13,6 +13,7 @@ excerpt: 'Despite all the disadvantages, there is an important reason NPS is sti
 draft: no
 series: ~
 layout: single
+show_post_thumbnail: true
 ---
 
 *This is a slightly altered version of my article that originally appeared on February 11, 2022 on my [Medium page.](https://medium.com/@ozengnr/nps-part1-5f4c6b1537df)*
