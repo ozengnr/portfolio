@@ -10,10 +10,11 @@ tags:
   - operations
 subtitle: 'What it is, what it is not'
 excerpt: 'Despite all the disadvantages, there is an important reason NPS is still the leading advocacy measurement method: Your advocates give you feedback for free. '
+summary: 'Despite all the disadvantages, there is an important reason NPS is still the leading advocacy measurement method: Your advocates give you feedback for free. '
 draft: no
 series: ~
 layout: single
-thumbnail: '/featured.jpg'
+thumbnail: 'featured.jpg'
 ---
 
 *This is a slightly altered version of my article that originally appeared on February 11, 2022 on my [Medium page.](https://medium.com/@ozengnr/nps-part1-5f4c6b1537df)*
@@ -36,7 +37,7 @@ Right away, you probably realized several things about NPS:
 * It’s **simple** to calculate.
 * It’s **simple** to set up.
 
-![Photo by Glen Carrie on Unsplash](images/featured.jpg)
+![Photo by Glen Carrie on Unsplash](featured.jpg)
 
 ##### What is a good NPS score?
 
