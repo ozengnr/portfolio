@@ -27,6 +27,9 @@ enableEmoji = true
     # one of: https://xyproto.github.io/splash/docs/ 
     style = "github"
     
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+    
 [params]
   orgName = "Oz Guner"
   orgLocal = "Boston, MA"
