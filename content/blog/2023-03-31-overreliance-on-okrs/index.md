@@ -1,0 +1,43 @@
+---
+title: Treating OKRs Fairly
+author: Oz Guner
+date: '2023-03-31'
+slug: okrs
+categories:
+  - podcasts
+tags:
+  - okrs
+  - operations
+  - goal-setting
+subtitle: 'Overreliance on the OKR framework could decrease the its marginal utility.'
+excerpt: 'Failing to achieve intended results with OKRs could point to a fundamental team failure rather than a broken framework. By nature, OKRs are not intended to be magical solutions to team dysfunction.'
+summary: 'Failing to achieve intended results with OKRs could point to a fundamental team failure rather than a broken framework. By nature, OKRs are not intended to be magical solutions to team dysfunction.'
+draft: no
+series: ~
+layout: single
+---
+
+Objectives and Key Results (OKRs) have become increasingly popular in recent years as a tool for companies to set goals and track progress towards them. As operational leaders, we are constantly looking for ways to improve the efficiency and productivity of our teams. It was only natural that we started relying on OKRs to concentrate focus on removing roadblocks. Christina Wodtke, a seasoned product leader and author of *[Radical Focus: Achieving Your Most Important Goals with Objectives and Key Results](https://www.amazon.com/Radical-Focus-Achieving-Important-Objectives/dp/0996006028)* points out in [a recent podcast interview with Lenny](https://www.lennyspodcast.com/videos/the-ultimate-guide-to-okrs-with-christina-wodtke-stanford/) that OKRs are not a panacea for a company's problems.
+
+
+### Benefits of OKRs
+I have three important deductions from Wodtke’s talk track about how OKRs help companies:
+* They provide an unrelenting focus within a specific timeframe (i.e. a quarter)
+* They create alignment within teams. Everybody knows what the larger focus is.
+* They create a learning cycle and a cadence of progress. They show the teams what progress looks like.
+
+### What we get wrong about OKRs
+One of the biggest mistakes that plagues teams is having too little focus spread over too many things. Yahoo’s ["Peanut butter memo"](https://www.wsj.com/articles/SB116379821933826657) was a big wake-up call for the company. The company's lack of focus and direction is likened to spreading peanut butter too thinly across a big slice of bread. OKRs need to be "one inch wide and one mile deep" - as focused, specific, and measurable as possible.
+
+OKRs are merely a framework to help us focus. Failing to achieve intended results with OKRs could point to a fundamental team failure rather than a broken framework. By nature, OKRs are not intended to be magical solutions to team dysfunction. Wodtke cites Patrick Lencioni’s classic [The Five Dysfuctions of a Team: A Leadership Fable](https://www.wiley.com/en-us/The+Five+Dysfunctions+of+a+Team%3A+A+Leadership+Fable%2C+20th+Anniversary+Edition-p-9780470893869) as a valuable resource for understanding the underlying issues that can prevent teams from achieving goals. In fact, [The Predictive Index's Team Assessment Tool](https://www.predictiveindex.com/software/talent-strategy/) is designed with this principle in mind: using the power of your individuals that make up your team type to craft your team strategy to achieve goals. Lencioni’s book identifies five key dysfunctions that can undermine team performance:
+* absence of trust
+* fear of conflict
+* lack of commitment
+* avoidance of accountability
+* inattention to results.
+
+To overcome these, Wodtke recommends transparency, clear expectation setting, and strict accountability. 
+
+### What we can learn
+
+Overall, I really enjoyed Lenny and Wodtke’s conversation during my long afternoon walk. It gave me ideas on how I can implement OKRs in my own life. Personally, setting fewer clear and achievable goals took a ton of load off my shoulders. I think it can do the same for teams.
