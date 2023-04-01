@@ -9,7 +9,7 @@ tags:
   - okrs
   - operations
   - goal-setting
-subtitle: 'Overreliance on the OKR framework could decrease the its marginal utility.'
+subtitle: 'Overreliance on the OKR framework could decrease its marginal utility.'
 excerpt: 'Failing to achieve intended results with OKRs could point to a fundamental team failure rather than a broken framework. By nature, OKRs are not intended to be magical solutions to team dysfunction.'
 summary: 'Failing to achieve intended results with OKRs could point to a fundamental team failure rather than a broken framework. By nature, OKRs are not intended to be magical solutions to team dysfunction.'
 draft: no
