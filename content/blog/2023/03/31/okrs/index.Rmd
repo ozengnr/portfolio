@@ -22,8 +22,8 @@ Objectives and Key Results (OKRs) have become increasingly popular in recent yea
 
 ### Benefits of OKRs
 I have three important deductions from Wodtke’s talk track about how OKRs help companies:
-* They provide an unrelenting focus within a specific timeframe (i.e. a quarter)
-* They create alignment within teams. Everybody knows what the larger focus is.
+* They provide an unrelenting focus within a specific timeframe (i.e. a quarter).
+* They create alignment within teams. Everybody knows what to focus on.
 * They create a learning cycle and a cadence of progress. They show the teams what progress looks like.
 
 ### What we get wrong about OKRs
