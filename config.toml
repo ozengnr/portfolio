@@ -34,7 +34,7 @@ enableEmoji = true
 [params]
   orgName = "Oz Guner"
   orgLocal = "Boston, MA"
-  description = "Personal portfolio website for Oz Guner"
+  description = "Oz Guner's personal website"
   # Google Analytics 4
   googleAnalyticsID = ""
   favicon = "/img/bar-chart-icon.png"
