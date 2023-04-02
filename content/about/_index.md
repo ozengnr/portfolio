@@ -2,10 +2,11 @@
 cascade:
   headless: true
 description: |
-  A website template for Hugo developed by RStudio & Formspree and available for free.
+  Personal website of Oz Guner
 show_header: true
 sidebar_left: false
 title: About
+
 ---
 
 ** index doesn't contain a body, just front matter above.

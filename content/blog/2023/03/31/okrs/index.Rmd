@@ -14,7 +14,7 @@ excerpt: 'Failing to achieve intended results with OKRs could point to a fundame
 summary: 'Failing to achieve intended results with OKRs could point to a fundamental team failure rather than a broken framework. By nature, OKRs are not intended to be magical solutions to team dysfunction.'
 draft: no
 series: ~
-layout: single
+layout: single-sidebar
 ---
 
 Objectives and Key Results (OKRs) have become increasingly popular in recent years as a tool for companies to set goals and track progress towards them. As operational leaders, we are constantly looking for ways to improve the efficiency and productivity of our teams. It was only natural that we started relying on OKRs to concentrate focus on removing roadblocks. Christina Wodtke, a seasoned product leader and author of *[Radical Focus: Achieving Your Most Important Goals with Objectives and Key Results](https://www.amazon.com/Radical-Focus-Achieving-Important-Objectives/dp/0996006028)* points out in [a recent podcast interview with Lenny](https://www.lennyspodcast.com/videos/the-ultimate-guide-to-okrs-with-christina-wodtke-stanford/) that OKRs are not a panacea for a company's problems.
