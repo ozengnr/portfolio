@@ -1,5 +1,5 @@
 ---
-title: In Search for the Most Important SaaS Metric
+title: In Search of the Most Important SaaS Metric
 author: Oz Guner
 date: '2023-04-03'
 slug: the-most-important-saas-metric
