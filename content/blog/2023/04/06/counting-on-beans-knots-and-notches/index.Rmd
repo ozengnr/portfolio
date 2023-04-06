@@ -10,7 +10,7 @@ tags:
 subtitle: 'A Short, Thrilling History of Data Collection'
 excerpt: 'We will always be prone to error no matter what we are counting, measuring, and analyzing. While we are getting much better at data collection, we will always be chasing that perfectly clean data set.'
 summary: 'We will always be prone to error no matter what we are counting, measuring, and analyzing. While we are getting much better at data collection, we will always be chasing that perfectly clean data set.'
-draft: yes
+draft: no
 series: ~
 layout: single
 ---
