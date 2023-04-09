@@ -1,7 +1,7 @@
 ---
 title: Net Promoter Score — Part 2
 author: Oz Guner
-date: '2023-04-10'
+date: '2023-04-08'
 slug: nps-part-2
 categories:
   - class notes
