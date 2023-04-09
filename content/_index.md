@@ -2,7 +2,7 @@
 action_label: Read Blog &rarr;
 action_link: /blog
 action_type: text
-description: I am a complexity advisor, a [Venturer](https://drive.google.com/file/d/1dERd7Txz9Q2VYSvg5lJovy8VynoEyW92/view?usp=drivesdk), and a real-world data practitioner. I love creating informative and insightful data visualizations. I enable businesses to grow by crafting a clear path to success at all levels, from end-users to senior management. I'm currently helping [The Predictive Index](https://www.predictiveindex.com/) in its product-led growth journey.
+description: I am a complexity advisor, a Venturer, and a real-world data practitioner. I love creating informative and insightful data visualizations. I enable businesses to grow by crafting a clear path to success at all levels, from end-users to senior management. I’m currently helping The Predictive Index in its product-led growth journey.
 image_left: true
 images:
 - img/ozportrait.png
