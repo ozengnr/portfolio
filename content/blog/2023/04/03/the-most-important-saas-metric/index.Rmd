@@ -8,6 +8,7 @@ categories:
 tags:
   - metrics
   - revenue
+keywords: ["saas","revenue","growth","okrs","retention","value creation","","customer satisfaction","customer acquisition cost","lifetime value","ltv to cac","ltv","cac"]
 subtitle: '...if it exists at all.'
 excerpt: 'While SaaS will probably never have a “single most important metric,” it will have more perspectives if we keep thinking about it.'
 summary: 'While SaaS will probably never have a “single most important metric,” it will have more perspectives if we keep thinking about it.'

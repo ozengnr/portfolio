@@ -1,0 +1,142 @@
+---
+title: The Great Conversion Rate Debate 
+author: Oz Guner
+date: '2023-04-17'
+slug: the-great-conversion-rate-debate
+categories:
+  - class notes
+tags:
+  - revenue
+  - metrics
+keywords: ["revenue","revenue growth","marketing funnel","saas","leads","conversion rate","cohort analysis","benchmarking","sales cycle","segmentation","demographics","behavior","funnel conversion rate","what is a good conversion rate", "what is the conversion rate for saas funnel", "what is a good b2b saas conversion rate","what is a typical saas marketing funnel"]
+subtitle: 'A Guide for Marketers'
+excerpt: 'Segmenting and customizing your cohorts will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. By segmenting your funnel based on specific characteristics such as demographics and behavior, you can create targeted messages and offers that speak directly to their interests and needs.'
+summary: 'Segmenting and customizing your cohorts will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. By segmenting your funnel based on specific characteristics such as demographics and behavior, you can create targeted messages and offers that speak directly to their interests and needs.'
+draft: yes
+series: ~
+layout: single-sidebar
+---
+Revenue is a factor of units and price. While price is largely a static parameter, the unit count has many factors impacting it. Many SaaS companies, especially the ones embracing the product-led growth strategy, have large marketing funnels comprised of leads/signups, opportunities, and units. 
+
+Often, the relationship between those funnel steps is reflected as conversion rate: If you have 100 qualified leads in your funnel, and if you create 10 opportunities from those, then your lead-to-opportunity conversion rate is $\{10 \text{ opportunities}}{100 \text{ leads}} = 10\%$. Likewise, if you close 2 of those opportunities, your opportunity-to-paid conversion rate would be $\frac{2 \text{ units}}{10 \text{ opportunities}} = 20\%$. Your lead/signup-to-paid conversion rate is, therefore, $\frac{2 \text{ units}}{100 \text{ leads}} = 2\%$.
+ 
+### Segmenting and cohorts 👥
+
+However, things are not so simple when it comes to performance monitoring. Perhaps the greatest debate in marketing funnel conversion rate phenomenon is the cohort grouping. What you measure and benchmark against your conversion rate can be a crucial determination. An example of how you can calculate the same thing in 2 different ways:
+
+Scenario: It's February 10th. You have 100 leads created in January, 50 leads created in so far February. You have closed-won 5 units in January and 10 units in February. 
+
+Approach 1: You conclude that your conversion rate for January is $\frac{5}{100} = 5\%$ and your conversion rate for February is $\frac{10}{50} = 20\%$.
+
+Approach 2: You conclude that only 3 of the 5 units that closed in January were actually from leads that are created in January. Similarly, 8 of 10 units closed in February were from leads created in January and the remaining 2 were sourced in February. Therefore, the conversion rate for the *January* cohort would be $\frac{(3+8)}{100} = 11\%$. This number *could* increase in the future as you work those leads, but will never decrease because you can't *unwin* them. So if your sales cycle is, say, 90 days, then your January cohort is only around 1/3 mature. With the same logic, your February conversion rate would be $\frac{2}{50} = 4\%$. However, it's important to note here that February cohort is very much new at this point and have ~85 more days to fully mature.
+
+### Time-based cohort conversion rate comparison 📈
+Therefore, a good way to show time-based cohort conversion rate could be the following:
+
+```{r echo=FALSE}
+library(dplyr)
+library(plotly)
+
+# read the data from the csv file
+data <- read.csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/blog/2023/04/14/the-great-conversion-rate-debate/cr_by_cohort.csv")
+
+data%>% top_n(10)
+
+# calculate the conversion rate
+conversion_rate <- data %>%
+  filter(days_to_convert > 0) %>%
+  group_by(days_to_convert, created_cohort) %>%
+  summarize(conversion_rate = sum(converted_to_paid) / sum(leads_signups))
+
+# create a new dataframe with the running total
+conversion_rate_running <- conversion_rate %>%
+  group_by(created_cohort) %>%
+  arrange(created_cohort, days_to_convert) %>%
+  mutate(rt_conv = cumsum(conversion_rate)) %>%
+  filter(days_to_convert > 0)  # remove the first value label
+
+# create the plotly chart
+p <- # create the plotly chart with custom hover text
+  plot_ly(data = conversion_rate_running, x = ~days_to_convert, y = ~rt_conv, color = ~created_cohort, type = "scatter", mode = "lines", showlegend = TRUE,
+          hovertemplate = "On day %{x} of creation, the average conversion rate was %{y:.2%}.") %>%
+  layout(title = "Conversion Rate by Days to Convert and Created Cohort",
+         xaxis = list(title = "Days to Convert", showgrid = FALSE),
+         yaxis = list(title = "Running Total Conversion Rate", tickformat = ".2%", showgrid = FALSE),
+         legend = list(x = 0.05, y = 1, tracegroupgap = 0, traceorder = "grouped"),
+         margin = list(l = 50, r = 50, b = 50, t = 50),
+         hovermode = "x",
+         colorway = c("#E7298A", "#66A61E", "#E6AB02", "#713122"))
+
+# add data labels to the very last values
+last_values <- conversion_rate_running %>%
+  group_by(created_cohort) %>%
+  slice_tail(n = 1)
+
+for(i in 1:nrow(last_values)){
+  p <- p %>% add_annotations(x = last_values$days_to_convert[i],
+                             y = last_values$rt_conv[i],
+                             text = paste0(round(last_values$rt_conv[i]*100, 2), "%"),
+                             showarrow = FALSE, xshift = 10, yshift = 10)
+}
+p
+```
+
+*For the code that powers this chart, visit this post.*
+
+This chart is a velocity chart and communicates how fast a month-based cohort converts to a paid unit on average. The higher the line is earlier, the faster it converts to a paid unit. For example, April 2023 is doing much better than March 2023: On day 15, April saw  1.88% conversion rate while March saw 0.53%. Seeing this difference wouldn't be so straightforward if it weren't for this cohort chart.
+
+### Customized cohort conversion rate comparison 📊
+You can segment your cohorts in any number of ways. Let's say you have 3 main channels and you want to know how they convert relative to each other and how fast. You can use the exact same method, only change the series to represent channels instead of time-based cohorts:
+
+```{r echo=FALSE}
+library(dplyr)
+library(plotly)
+
+# read the data from the csv file
+data <- read.csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/blog/2023/04/14/the-great-conversion-rate-debate/cr_by_channel.csv")
+
+data%>% top_n(10)
+
+# calculate the conversion rate
+conversion_rate <- data %>%
+  filter(days_to_convert > 0) %>%
+  group_by(days_to_convert, channel) %>%
+  summarize(conversion_rate = sum(converted_to_paid) / sum(leads_signups))
+
+# create a new dataframe with the running total
+conversion_rate_running <- conversion_rate %>%
+  group_by(channel) %>%
+  arrange(channel, days_to_convert) %>%
+  mutate(rt_conv = cumsum(conversion_rate)) %>%
+  filter(days_to_convert > 0)  # remove the first value label
+
+# create the plotly chart
+p <- # create the plotly chart with custom hover text
+  plot_ly(data = conversion_rate_running, x = ~days_to_convert, y = ~rt_conv, color = ~channel, type = "scatter", mode = "lines", showlegend = TRUE,
+          hovertemplate = "On day %{x} of creation, the average conversion rate was %{y:.2%}.") %>%
+  layout(title = "Conversion Rate by Days to Convert and Channel",
+         xaxis = list(title = "Days to Convert", showgrid = FALSE),
+         yaxis = list(title = "Running Total Conversion Rate", tickformat = ".2%", showgrid = FALSE),
+         legend = list(x = 0.05, y = 1, tracegroupgap = 0, traceorder = "grouped"),
+         margin = list(l = 50, r = 50, b = 50, t = 50),
+         hovermode = "x",
+         colorway = c("#E7298A", "#66A61E", "#E6AB02", "#713122"))
+
+# add data labels to the very last values
+last_values <- conversion_rate_running %>%
+  group_by(channel) %>%
+  slice_tail(n = 1)
+
+for(i in 1:nrow(last_values)){
+  p <- p %>% add_annotations(x = last_values$days_to_convert[i],
+                             y = last_values$rt_conv[i],
+                             text = paste0(round(last_values$rt_conv[i]*100, 2), "%"),
+                             showarrow = FALSE, xshift = 10, yshift = 10)
+}
+p
+```
+*For the code that powers this chart, visit this post.*
+
+This chart follows the same logic as the previous chart. Channel 3 is converting much better than the others, and Channel 1 is the worst-performing channel. Marketers use this type of analysis for intent-based marketing: "High intent" signups convert anywhere from 5 to 50 times better than "low intent" signups. If this interests you,  [HubSpot's State of Marketing Report](https://www.hubspot.com/marketing-statistics) is an excellent place to start.
+
+Overall, segmenting and customizing your cohorts will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. By segmenting your funnel based on specific characteristics such as demographics and behavior, you can create targeted messages and offers that speak directly to their interests and needs.

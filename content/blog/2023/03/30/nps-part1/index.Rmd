@@ -8,6 +8,7 @@ categories:
 tags:
   - nps
   - operations
+keywords: ["nps","net promoter score","how do you calculate net promoter score","how do you calculate nps in excel","is 70 a good net promoter score","what is the lowest nps score","what is nps and why is it important","customer advocacy","advocacy tool","free survey software","free nps software"]
 subtitle: 'What it is, what it is not'
 excerpt: 'Despite all the disadvantages, there is an important reason NPS is still the leading advocacy measurement method: Your advocates give you feedback for free.'
 summary: 'Despite all the disadvantages, there is an important reason NPS is still the leading advocacy measurement method: Your advocates give you feedback for free.'

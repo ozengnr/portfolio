@@ -8,6 +8,7 @@ categories:
 tags:
   - nps
   - operations
+keywords: ["nps","net promoter score","executive reporting","metrics","surveys","market trends","data best practices","client base","growth"]
 subtitle: 'Impactful Metrics & Segmentation'
 excerpt: 'NPS metrics are highly customizable and should be tailored to your organization. Regrouping with your stakeholders to determine what matters most for your product is the best practice.'
 summary: 'NPS metrics are highly customizable and should be tailored to your organization. Regrouping with your stakeholders to determine what matters most for your product is the best practice.'

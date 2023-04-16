@@ -13,7 +13,10 @@
         {{ partial "shared/btn-links.html" . }}
       </div>
       {{ end }}
-
+    <meta
+     name="description"
+     content="{{ if .Params.summary }}{{ .Params.summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Blog post{{ end }}"
+   />
       </header>
       <section class="post-body pt5 pb4">
         {{ .Content }}

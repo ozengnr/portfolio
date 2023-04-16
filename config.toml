@@ -15,7 +15,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
 enableEmoji = true
 
 [permalinks]
-    blog = "/blog/:year/:month/:day/:slug/"
+    blog = "blog/:year/:month/:day/:slug/"
     
 [markup]
   defaultMarkdownHandler = "goldmark"
@@ -34,7 +34,7 @@ enableEmoji = true
 [params]
   orgName = "Oz Guner"
   orgLocal = "Boston, MA"
-  description = "Oz Guner's personal website"
+  description = "Personal website of Oz Guner"
   # Google Analytics 4
   googleAnalyticsID = ""
   favicon = "/img/bar-chart-icon.png"

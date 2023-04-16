@@ -7,12 +7,13 @@ categories:
   - musings
 tags: 
   - data collection
+keywords: ["data collection","data quality","analytics","data visualization","dataset","parameters"]
 subtitle: 'A Short, Thrilling History of Data Collection'
 excerpt: 'We will always be prone to error no matter what we are counting, measuring, and analyzing. While we are getting much better at data collection, we will always be chasing that perfectly clean data set.'
 summary: 'We will always be prone to error no matter what we are counting, measuring, and analyzing. While we are getting much better at data collection, we will always be chasing that perfectly clean data set.'
 draft: no
 series: ~
-layout: single
+layout: single-sidebar
 ---
 
 Every time I see an interesting graph relaying information about obscure facts or phenomena, the first question that comes to my mind is the data collection. How do you collect this data? How do you store it? How do you analyze it? Data collection and data quality is, and always will be, the central part of any collection, aggregation, and analytics process. 
