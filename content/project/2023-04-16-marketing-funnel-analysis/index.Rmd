@@ -8,12 +8,11 @@ categories:
 tags: ["marketing"]
 keywords: ["what is a good conversion rate","cohorts","marketing funnel","leads","segmentation","demographics","marketing analysis","conversion rate"]
 subtitle: 'Conversion Rates and Velocity by Cohorts'
-excerpt: 'Conversion rates and conversion velocities are powerful tools in a marketer\'s toolkit. It\'s important to look at the same data from different perspectives to gain more insightful and actionable information.'
-summary: 'Conversion rates and conversion velocities are powerful tools in a marketer\'s toolkit. It\'s important to look at the same data from different perspectives to gain more insightful and actionable information.'
+excerpt: 'Conversion rates and conversion velocities are powerful tools in the toolkit of a marketer. It is important to look at the same data from different perspectives to gain more insightful and actionable information.'
+summary: 'Conversion rates and conversion velocities are powerful tools in the toolkit of a marketer. It is important to look at the same data from different perspectives to gain more insightful and actionable information.'
 draft: no
 series: ~
 layout: single-sidebar
-
 ---
 
 ### Goal
