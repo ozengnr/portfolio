@@ -18,7 +18,7 @@ layout: single-sidebar
 ---
 Revenue is a factor of units and price. While price is largely a static parameter, the unit count has many factors impacting it. Many SaaS companies, especially the ones embracing the product-led growth strategy, have large marketing funnels comprised of leads/signups, opportunities, and units. 
 
-Often, the relationship between those funnel steps is reflected as conversion rate: If you have 100 qualified leads in your funnel, and if you create 10 opportunities from those, then your lead-to-opportunity conversion rate is $\{10 \text{ opportunities}}{100 \text{ leads}} = 10\%$. Likewise, if you close 2 of those opportunities, your opportunity-to-paid conversion rate would be $\frac{2 \text{ units}}{10 \text{ opportunities}} = 20\%$. Your lead/signup-to-paid conversion rate is, therefore, $\frac{2 \text{ units}}{100 \text{ leads}} = 2\%$.
+Often, the relationship between those funnel steps is reflected as conversion rate: If you have 100 qualified leads in your funnel, and if you create 10 opportunities from those, then your lead-to-opportunity conversion rate is $\frac{10 \text{ opportunities}}{100 \text{ leads}} = 10\%$. Likewise, if you close 2 of those opportunities, your opportunity-to-paid conversion rate would be $\frac{2 \text{ units}}{10 \text{ opportunities}} = 20\%$. Your lead/signup-to-paid conversion rate is, therefore, $\frac{2 \text{ units}}{100 \text{ leads}} = 2\%$.
  
 ### Segmenting and cohorts 👥
 

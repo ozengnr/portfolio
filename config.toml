@@ -16,6 +16,7 @@ enableEmoji = true
 
 [permalinks]
     blog = "blog/:year/:month/:day/:slug/"
+    project = "project/:year/:month/:day/:slug/"
     
 [markup]
   defaultMarkdownHandler = "goldmark"
@@ -39,7 +40,7 @@ enableEmoji = true
   googleAnalyticsID = ""
   favicon = "/img/bar-chart-icon.png"
   logo = "/img/bar-chart-icon.png"
-  mainSections = ["blog","contact","about"]
+  mainSections = ["blog","contact","about", "project"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -121,15 +122,20 @@ enableEmoji = true
     url = "/blog/"
     weight = 1
   [[menu.header]]
+    name = "Projects"
+    title = "Projects"
+    url = "/project/"
+    weight = 2    
+  [[menu.header]]
     name = "About"
     title = "About"
     url = "/about/"
-    weight = 2    
+    weight = 3    
   [[menu.header]]
     name = "Contact"
     title = "Contact"
     url = "/contact/"
-    weight = 3
+    weight = 4
 
   # Configure footer  
   [[menu.footer]]

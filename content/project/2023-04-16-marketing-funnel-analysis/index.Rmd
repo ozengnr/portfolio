@@ -1,0 +1,211 @@
+---
+title: Marketing Funnel Analysis
+author: Oz Guner
+date: '2023-04-16'
+slug: marketing-funnel-analysis
+categories:
+  - projects
+tags: []
+keywords: ["what is a good conversion rate","cohorts","marketing funnel","leads","segmentation","demographics","marketing analysis","conversion rate"]
+subtitle: 'Conversion Rates and Velocity by Cohorts'
+excerpt: 'Conversion rates and conversion velocities are powerful tools in a marketer\'s toolkit. It\'s important to look at the same data from different perspectives to gain more insightful and actionable information.'
+summary: 'Conversion rates and conversion velocities are powerful tools in a marketer\'s toolkit. It\'s important to look at the same data from different perspectives to gain more insightful and actionable information.'
+draft: yes
+series: ~
+layout: single-sidebar
+
+---
+
+### Goal
+The goal of this project is to study conversion rates and conversion rate velocities by cohorts. While you can use different tools to achieve the same results, I will be including the R code step by step to (hopefully) create impactful visualizations.
+
+### Setup
+We have a few simple datasets in hand that we downloaded from our system of records. Let's look at our base dataset:
+
+```{r echo=TRUE}
+#install the readr package to read our csv, which contains basic data
+library(readr)
+df <- read_csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/project/2023-04-16-marketing-funnel-analysis/base.csv")
+
+#view data
+df
+```
+
+Looks like this data is aggregated by month. Let's find the conversion rate for each month.
+
+``` {r echo=TRUE}
+# create a new column for the conversion rate
+df$conversion_rate <- df$converted / df$created
+# print the updated data frame
+df
+```
+
+Let's create a visualization of the conversion rate by month so we have a more insightful look into our marketing funnel:
+
+``` {r echo=TRUE}
+library(plotly)
+
+# sort the data by month
+df$month <- factor(df$month, levels = c("January 2023", "February 2023", "March 2023", "April 2023"))
+
+# create the plot
+plot_ly(df, x = ~month) %>%
+  add_trace(y = ~created, name = "Created", type = "bar", marker = list(color = "#4aa564"),
+            text = ~paste0(created)) %>%
+  add_trace(y = ~converted, name = "Converted", type = "bar", marker = list(color = "#fdb81e"),
+            text = ~paste0(converted)) %>%
+  add_trace(y = ~conversion_rate, name = "Conversion Rate", type = "scatter", mode = "lines", yaxis = "y2",
+            line = list(color = "#046b99"), marker = list(color = "#046b99"),
+            text = ~paste0(scales::percent(conversion_rate, accuracy = 0.01))) %>%
+  layout(title = "Conversion Rate by Month",
+         xaxis = list(title = "Month"),
+         yaxis = list(title = "Created/Converted Count", side = "right",
+                      tickfont = list(size = 12),
+                      tickformat = ",.0f",
+                      showticklabels = TRUE,
+                      showgrid = FALSE),
+         yaxis2 = list(title = "Conversion Rate (%)", side = "left", overlaying = "y",
+                       tickfont = list(size = 12),
+                       tickformat = ".2%",
+                       tickvals = seq(0, 1, 0.1),
+                       tickmode = "linear",
+                       textfont = list(size = 12),
+                       showticklabels = TRUE,
+                       showgrid = TRUE,
+                       zeroline = TRUE),
+         legend = list(x = 0.5, y = -0.2, orientation = "h",
+                       font = list(size = 12),
+                       xanchor = "center",
+                       yanchor = "top"))
+
+
+
+```
+
+This chart communicates the leads created in a month and converted in the same month. February seems to have a higher conversion rate than January. April is going really well and March might need a little help. 
+
+There's one caveat in looking at conversion rates in a simple way. The 57 units converted in February might not all be created in February. There's another way to look at this problem: The cohort velocity method. Let's create a spaghetti chart that showcases how fast leads from a cohort convert to a paid client:
+
+```{r echo=TRUE}
+library(dplyr)
+library(plotly)
+library
+
+# read the data from the csv file
+data <- read.csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/blog/2023/04/14/the-great-conversion-rate-debate/cr_by_cohort.csv")
+#let's look at the data
+data%>% top_n(10)
+```
+
+Notice how the data is structured. Each record indicates a month cohort, the total leads/signups in that month, and the total leads/signups converted at specific days each month. Whenever there's at least one unit converted at a specific day interval, one record will be created. Now let's calculate the conversion rate for each record:
+
+```{r echo=TRUE}
+# calculate the conversion rate
+conversion_rate <- data %>%
+  filter(days_to_convert > 0) %>%
+  group_by(days_to_convert, created_cohort) %>%
+  summarize(conversion_rate = sum(converted_to_paid) / sum(leads_signups))
+conversion_rate
+```
+
+In this case, a conversion rate is assigned for each record. If we are going to take a holistic view to look at the total leads converted at day X, we'd need to create a running conversion rate calculation, as follows:
+
+``` {r echo=TRUE}
+# create a new dataframe with the running total
+conversion_rate_running <- conversion_rate %>%
+  group_by(created_cohort) %>%
+  arrange(created_cohort, days_to_convert) %>%
+  mutate(rt_conv = cumsum(conversion_rate)) %>%
+  filter(days_to_convert > 0)  # remove the first value label
+```
+
+Notice that using the `cumsum()` method and grouping by cohort, you can create a running conversion rate in that specific cohort, which literally sums up the cumulative values.
+
+Next, we'll create a plotly chart:
+``` {r echo=TRUE}
+# create the plotly chart
+p <- # create the plotly chart with custom hover text
+  plot_ly(data = conversion_rate_running, x = ~days_to_convert, y = ~rt_conv, color = ~created_cohort, type = "scatter", mode = "lines", showlegend = TRUE,
+          hovertemplate = "On day %{x} of creation, the average conversion rate was %{y:.2%}.") %>%
+  layout(title = "Conversion Rate by Days to Convert and Created Cohort",
+         xaxis = list(title = "Days to Convert", showgrid = FALSE),
+         yaxis = list(title = "Running Total Conversion Rate", tickformat = ".2%", showgrid = FALSE),
+         legend = list(x = 0.05, y = 1, tracegroupgap = 0, traceorder = "grouped"),
+         margin = list(l = 50, r = 50, b = 50, t = 50),
+         hovermode = "x",
+         colorway = c("#E7298A", "#66A61E", "#E6AB02", "#713122"))
+
+# add data labels to the very last values
+last_values <- conversion_rate_running %>%
+  group_by(created_cohort) %>%
+  slice_tail(n = 1)
+
+for(i in 1:nrow(last_values)){
+  p <- p %>% add_annotations(x = last_values$days_to_convert[i],
+                             y = last_values$rt_conv[i],
+                             text = paste0(round(last_values$rt_conv[i]*100, 2), "%"),
+                             showarrow = FALSE, xshift = 10, yshift = 10)
+}
+p
+```
+
+Remember that, in the single conversion rate method, our conversion rate for January was 1.85% and February was 1.97%. However, the cohort-based conversion rate paints a clearer picture by eliminating the time bias. January actually has a higher conversion rate with 2.41% versus February's 2.1%. Moreover, January was converting at higher levels at on average on Day 75, where February is today: 2.26% vs 2.1%. 
+
+### Other ways to look at conversion velocity.
+
+Another way to look at conversion velocity is by custom segmentation. Examples can include intent levels, demographics, and product actions. Let's look at the same data from another perspective:
+
+```{r echo=FALSE}
+library(dplyr)
+library(plotly)
+
+# read the data from the csv file
+data <- read.csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/blog/2023/04/14/the-great-conversion-rate-debate/cr_by_channel.csv")
+
+data%>% top_n(10)
+```
+Similar to the other dataset, this dataset communicates the speed to convert broken down by channels instead of time. Regardless of when they were created we can look at how leads from different channels convert.
+``` {r echo=TRUE}
+# calculate the conversion rate
+conversion_rate <- data %>%
+  filter(days_to_convert > 0) %>%
+  group_by(days_to_convert, channel) %>%
+  summarize(conversion_rate = sum(converted_to_paid) / sum(leads_signups))
+
+# create a new dataframe with the running total
+conversion_rate_running <- conversion_rate %>%
+  group_by(channel) %>%
+  arrange(channel, days_to_convert) %>%
+  mutate(rt_conv = cumsum(conversion_rate)) %>%
+  filter(days_to_convert > 0)  # remove the first value label
+
+# create the plotly chart
+p <- # create the plotly chart with custom hover text
+  plot_ly(data = conversion_rate_running, x = ~days_to_convert, y = ~rt_conv, color = ~channel, type = "scatter", mode = "lines", showlegend = TRUE,
+          hovertemplate = "On day %{x} of creation, the average conversion rate was %{y:.2%}.") %>%
+  layout(title = "Conversion Rate by Days to Convert and Channel",
+         xaxis = list(title = "Days to Convert", showgrid = FALSE),
+         yaxis = list(title = "Running Total Conversion Rate", tickformat = ".2%", showgrid = FALSE),
+         legend = list(x = 0.05, y = 1, tracegroupgap = 0, traceorder = "grouped"),
+         margin = list(l = 50, r = 50, b = 50, t = 50),
+         hovermode = "x",
+         colorway = c("#E7298A", "#66A61E", "#E6AB02", "#713122"))
+
+# add data labels to the very last values
+last_values <- conversion_rate_running %>%
+  group_by(channel) %>%
+  slice_tail(n = 1)
+
+for(i in 1:nrow(last_values)){
+  p <- p %>% add_annotations(x = last_values$days_to_convert[i],
+                             y = last_values$rt_conv[i],
+                             text = paste0(round(last_values$rt_conv[i]*100, 2), "%"),
+                             showarrow = FALSE, xshift = 10, yshift = 10)
+}
+p
+```
+
+In this case, Channel 3 converts the best, followed by Channel 2 and Channel 1. Looking at this data with time controls could introduce even more insights as different channels might convert at different circumstances.
+
+### Conclusion
+Conversion rates and conversion velocities are powerful tools in a marketer's toolkit. It's important to look at the same data from different perspectives to gain more insightful and actionable information. 
