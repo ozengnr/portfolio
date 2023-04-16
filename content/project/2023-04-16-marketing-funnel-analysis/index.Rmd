@@ -5,12 +5,12 @@ date: '2023-04-16'
 slug: marketing-funnel-analysis
 categories:
   - projects
-tags: []
+tags: ["marketing"]
 keywords: ["what is a good conversion rate","cohorts","marketing funnel","leads","segmentation","demographics","marketing analysis","conversion rate"]
 subtitle: 'Conversion Rates and Velocity by Cohorts'
 excerpt: 'Conversion rates and conversion velocities are powerful tools in a marketer\'s toolkit. It\'s important to look at the same data from different perspectives to gain more insightful and actionable information.'
 summary: 'Conversion rates and conversion velocities are powerful tools in a marketer\'s toolkit. It\'s important to look at the same data from different perspectives to gain more insightful and actionable information.'
-draft: yes
+draft: no
 series: ~
 layout: single-sidebar
 
