@@ -12,7 +12,7 @@ keywords: ["revenue","revenue growth","marketing funnel","saas","leads","convers
 subtitle: 'A Guide for Marketers'
 excerpt: 'Segmenting and customizing your cohorts will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. By segmenting your funnel based on specific characteristics such as demographics and behavior, you can create targeted messages and offers that speak directly to their interests and needs.'
 summary: 'Segmenting and customizing your cohorts will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. By segmenting your funnel based on specific characteristics such as demographics and behavior, you can create targeted messages and offers that speak directly to their interests and needs.'
-draft: yes
+draft: no
 series: ~
 layout: single-sidebar
 ---
