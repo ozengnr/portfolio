@@ -135,7 +135,7 @@ for(i in 1:nrow(last_values)){
 }
 p
 ```
-*For the code that powers this chart, visit this post.*
+*For the code that powers this chart, visit [this post.](/project/2023/04/16/marketing-funnel-analysis/)*
 
 This chart follows the same logic as the previous chart. Channel 3 is converting much better than the others, and Channel 1 is the worst-performing channel. Marketers use this type of analysis for intent-based marketing: "High intent" signups convert anywhere from 5 to 50 times better than "low intent" signups. If this interests you,  [HubSpot's State of Marketing Report](https://www.hubspot.com/marketing-statistics) is an excellent place to start.
 
