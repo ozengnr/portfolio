@@ -21,7 +21,7 @@ The goal of this project is to study conversion rates and conversion rate veloci
 ### Setup
 We have a few simple datasets in hand that we downloaded from our system of records. Let's look at our base dataset:
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #install the readr package to read our csv, which contains basic data
 library(readr)
 df <- read_csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/project/2023-04-16-marketing-funnel-analysis/base.csv")
@@ -32,7 +32,7 @@ df
 
 Looks like this data is aggregated by month. Let's find the conversion rate for each month.
 
-``` {r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=TRUE}
 # create a new column for the conversion rate
 df$conversion_rate <- df$converted / df$created
 # print the updated data frame
@@ -41,7 +41,7 @@ df
 
 Let's create a visualization of the conversion rate by month so we have a more insightful look into our marketing funnel:
 
-``` {r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=TRUE}
 library(plotly)
 
 # sort the data by month
@@ -85,10 +85,9 @@ This chart communicates the leads created in a month and converted in the same m
 
 There's one caveat in looking at conversion rates in a simple way. The 57 units converted in February might not all be created in February. There's another way to look at this problem: The cohort velocity method. Let's create a spaghetti chart that showcases how fast leads from a cohort convert to a paid client:
 
-```{r echo=TRUE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 library(dplyr)
 library(plotly)
-library
 
 # read the data from the csv file
 data <- read.csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/blog/2023/04/14/the-great-conversion-rate-debate/cr_by_cohort.csv")
@@ -98,7 +97,7 @@ data%>% top_n(10)
 
 Notice how the data is structured. Each record indicates a month cohort, the total leads/signups in that month, and the total leads/signups converted at specific days each month. Whenever there's at least one unit converted at a specific day interval, one record will be created. Now let's calculate the conversion rate for each record:
 
-```{r echo=TRUE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 # calculate the conversion rate
 conversion_rate <- data %>%
   filter(days_to_convert > 0) %>%
@@ -109,7 +108,7 @@ conversion_rate
 
 In this case, a conversion rate is assigned for each record. If we are going to take a holistic view to look at the total leads converted at day X, we'd need to create a running conversion rate calculation, as follows:
 
-``` {r echo=TRUE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 # create a new dataframe with the running total
 conversion_rate_running <- conversion_rate %>%
   group_by(created_cohort) %>%
@@ -121,7 +120,7 @@ conversion_rate_running <- conversion_rate %>%
 Notice that using the `cumsum()` method and grouping by cohort, you can create a running conversion rate in that specific cohort, which literally sums up the cumulative values.
 
 Next, we'll create a plotly chart:
-``` {r echo=TRUE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 # create the plotly chart
 p <- # create the plotly chart with custom hover text
   plot_ly(data = conversion_rate_running, x = ~days_to_convert, y = ~rt_conv, color = ~created_cohort, type = "scatter", mode = "lines", showlegend = TRUE,
@@ -154,7 +153,7 @@ Remember that, in the single conversion rate method, our conversion rate for Jan
 
 Another way to look at conversion velocity is by custom segmentation. Examples can include intent levels, demographics, and product actions. Let's look at the same data from another perspective:
 
-```{r echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 library(dplyr)
 library(plotly)
 
@@ -164,7 +163,7 @@ data <- read.csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/cont
 data%>% top_n(10)
 ```
 Similar to the other dataset, this dataset communicates the speed to convert broken down by channels instead of time. Regardless of when they were created we can look at how leads from different channels convert.
-``` {r echo=TRUE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 # calculate the conversion rate
 conversion_rate <- data %>%
   filter(days_to_convert > 0) %>%

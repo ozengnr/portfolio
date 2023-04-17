@@ -10,8 +10,8 @@ tags:
   - metrics
 keywords: ["revenue","revenue growth","marketing funnel","saas","leads","conversion rate","cohort analysis","benchmarking","sales cycle","segmentation","demographics","behavior","funnel conversion rate","what is a good conversion rate", "what is the conversion rate for saas funnel", "what is a good b2b saas conversion rate","what is a typical saas marketing funnel"]
 subtitle: 'A Guide for Marketers'
-excerpt: 'Segmenting and customizing your cohorts will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. By segmenting your funnel based on specific characteristics such as demographics and behavior, you can create targeted messages and offers that speak directly to their interests and needs.'
-summary: 'Segmenting and customizing your cohorts will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. By segmenting your funnel based on specific characteristics such as demographics and behavior, you can create targeted messages and offers that speak directly to their interests and needs.'
+excerpt: 'Segmenting and customizing your cohorts based on demographics and behavior will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. It will also help you create targeted messages and offers that speak directly to their needs.'
+summary: 'Segmenting and customizing your cohorts based on demographics and behavior will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. It will also help you create targeted messages and offers that speak directly to their needs.'
 draft: no
 series: ~
 layout: single-sidebar
@@ -33,14 +33,12 @@ Approach 2: You conclude that only 3 of the 5 units that closed in January were 
 ### Time-based cohort conversion rate comparison 📈
 Therefore, a good way to show time-based cohort conversion rate could be the following:
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 library(dplyr)
 library(plotly)
 
 # read the data from the csv file
 data <- read.csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/blog/2023/04/14/the-great-conversion-rate-debate/cr_by_cohort.csv")
-
-data%>% top_n(10)
 
 # calculate the conversion rate
 conversion_rate <- data %>%
@@ -81,21 +79,19 @@ for(i in 1:nrow(last_values)){
 p
 ```
 
-*For the code that powers this chart, visit this post.*
+*For the code that powers this chart, visit [this post.](/project/2023/04/16/marketing-funnel-analysis/)*
 
 This chart is a velocity chart and communicates how fast a month-based cohort converts to a paid unit on average. The higher the line is earlier, the faster it converts to a paid unit. For example, April 2023 is doing much better than March 2023: On day 15, April saw  1.88% conversion rate while March saw 0.53%. Seeing this difference wouldn't be so straightforward if it weren't for this cohort chart.
 
 ### Customized cohort conversion rate comparison 📊
 You can segment your cohorts in any number of ways. Let's say you have 3 main channels and you want to know how they convert relative to each other and how fast. You can use the exact same method, only change the series to represent channels instead of time-based cohorts:
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 library(dplyr)
 library(plotly)
 
 # read the data from the csv file
 data <- read.csv("C:/Users/ozeng/Documents/R Repository/portfolio/portfolio/content/blog/2023/04/14/the-great-conversion-rate-debate/cr_by_channel.csv")
-
-data%>% top_n(10)
 
 # calculate the conversion rate
 conversion_rate <- data %>%
