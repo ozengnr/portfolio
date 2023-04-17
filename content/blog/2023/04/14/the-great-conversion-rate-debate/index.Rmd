@@ -10,8 +10,8 @@ tags:
   - metrics
 keywords: ["revenue","revenue growth","marketing funnel","saas","leads","conversion rate","cohort analysis","benchmarking","sales cycle","segmentation","demographics","behavior","funnel conversion rate","what is a good conversion rate", "what is the conversion rate for saas funnel", "what is a good b2b saas conversion rate","what is a typical saas marketing funnel"]
 subtitle: 'A Guide for Marketers'
-excerpt: 'Segmenting and customizing your cohorts based on demographics and behavior will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. It will also help you create targeted messages and offers that speak directly to their needs.'
-summary: 'Segmenting and customizing your cohorts based on demographics and behavior will give you additional perspective into which parts of your customer base is more likely to convert to a paid customer. It will also help you create targeted messages and offers that speak directly to their needs.'
+excerpt: 'Segmenting and customizing your leads based on demographics and behavior will give you additional perspective into who in your lead database is more likely to convert to a paid customer. It will also help you create targeted messages and offers that speak directly to their needs.'
+summary: 'Segmenting and customizing your leads based on demographics and behavior will give you additional perspective into who in your lead database is more likely to convert to a paid customer. It will also help you create targeted messages and offers that speak directly to their needs.'
 draft: no
 series: ~
 layout: single-sidebar
