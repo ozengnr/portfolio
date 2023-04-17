@@ -24,11 +24,11 @@ Often, the relationship between those funnel steps is reflected as conversion ra
 
 However, things are not so simple when it comes to performance monitoring. Perhaps the greatest debate in marketing funnel conversion rate phenomenon is the cohort grouping. What you measure and benchmark against your conversion rate can be a crucial determination. An example of how you can calculate the same thing in 2 different ways:
 
-Scenario: It's February 10th. You have 100 leads created in January, 50 leads created in so far February. You have closed-won 5 units in January and 10 units in February. 
+**Scenario:** It's February 10th. You have 100 leads created in January, 50 leads created in so far February. You have closed-won 5 units in January and 10 units in February. 
 
-Approach 1: You conclude that your conversion rate for January is $\frac{5}{100} = 5\%$ and your conversion rate for February is $\frac{10}{50} = 20\%$.
+**Approach 1:** You conclude that your conversion rate for January is $\frac{5}{100} = 5\%$ and your conversion rate for February is $\frac{10}{50} = 20\%$.
 
-Approach 2: You conclude that only 3 of the 5 units that closed in January were actually from leads that are created in January. Similarly, 8 of 10 units closed in February were from leads created in January and the remaining 2 were sourced in February. Therefore, the conversion rate for the *January* cohort would be $\frac{(3+8)}{100} = 11\%$. This number *could* increase in the future as you work those leads, but will never decrease because you can't *unwin* them. So if your sales cycle is, say, 90 days, then your January cohort is only around 1/3 mature. With the same logic, your February conversion rate would be $\frac{2}{50} = 4\%$. However, it's important to note here that February cohort is very much new at this point and have ~85 more days to fully mature.
+**Approach 2:** You conclude that only 3 of the 5 units that closed in January were actually from leads that are created in January. Similarly, 8 of 10 units closed in February were from leads created in January and the remaining 2 were sourced in February. Therefore, the conversion rate for the *January* cohort would be $\frac{(3+8)}{100} = 11\%$. This number *could* increase in the future as you work those leads, but will never decrease because you can't *unwin* them. So if your sales cycle is, say, 90 days, then your January cohort is only around 1/3 mature. With the same logic, your February conversion rate would be $\frac{2}{50} = 4\%$. However, it's important to note here that February cohort is very much new at this point and have ~85 more days to fully mature.
 
 ### Time-based cohort conversion rate comparison 📈
 Therefore, a good way to show time-based cohort conversion rate could be the following:
