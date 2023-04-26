@@ -24,7 +24,7 @@ sidebar:
   title: Blog
 thumbnail_left: false
 title: Blog
-layout: list-sidebar
+layout: list-grid
 
 ---
 
