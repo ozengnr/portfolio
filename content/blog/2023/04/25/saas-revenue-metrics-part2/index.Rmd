@@ -19,7 +19,7 @@ layout: single-sidebar
 ---
 *This series was inspired by Sara Archer’s “SaaS Metrics Fundamentals” class on [Pavilion](https://www.joinpavilion.com/pavilion-university).*
 
-In [our previous post](saas-revenue-metrics-part1/), we explored bookings and billings. This post will deal with ACV, TCV, ARR, and MRR and their subtle differences. The post will use the same case study as Part 1:
+In [our previous post](/2023/04/19/saas-revenue-metrics-part1/), we explored bookings and billings. This post will deal with ACV, TCV, ARR, and MRR and their subtle differences. The post will use the same case study as Part 1:
 
 > *For simplicity, we'll assume that we recently built our niche SaaS business: an inventory
 management system for small and mid-sized boat retailers. We picked up the phone and we
