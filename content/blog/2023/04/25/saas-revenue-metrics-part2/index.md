@@ -9,9 +9,10 @@ tags:
   - revenue
   - metrics
   - goal-setting
-subtitle: 'ACV, TCV, ARR, and MRR'
-excerpt: 'Distinguishing between recurring and non-recurring revenue is crucial.'
-summary: ''
+subtitle: 'Most important SaaS metrics include ACV, TCV, ARR, and MRR. Understanding the subtle differences between these metrics is crucial for making informed decisions at SaaS companies.'
+excerpt: 'ACV is the annualized version of all revenue generated from a contract, while ARR only takes the recurring revenue into account. Understanding the subtle differences between these metrics is crucial for making informed decisions at SaaS companies.'
+summary: 'ACV is the annualized version of all revenue generated from a contract, while ARR only takes the recurring revenue into account. Understanding the subtle differences between these metrics is crucial for making informed decisions at SaaS companies.'
+keywords: ['arr vs mrr', 'mrr vs arr', 'saas metrics', 'metrics for enterprise sales','most important saas metrics', 'hubspot saas metrics', 'arr revenue', 'vanity metrics', 'conversion rate', 'erp software', 'business intelligence software', 'cac saas', 'ltv saas', 'saas revenue model', 'saas kpis', 'saas churn' ]
 draft: no
 series: ~
 layout: single-sidebar
