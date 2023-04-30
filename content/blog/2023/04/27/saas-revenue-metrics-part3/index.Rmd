@@ -13,12 +13,12 @@ excerpt: 'There are many revenue metrics used across the industry. However, ther
 be many more ways to look at revenue and growth from a quantitative and qualitative perspective.'
 summary: 'There are many revenue metrics used across the industry. However, there may
 be many more ways to look at revenue and growth from a quantitative and qualitative perspective.'
-draft: yes
+draft: no
 series: ~
 layout: single-sidebar
 ---
 
-In [our previous post](/2023/04/25/saas-revenue-metrics-part2/), we explored recurring and non-recurring revenue metrics, including ACV, TCV, MRR, and ARR. This post will conclude the series with revenue and cash recognition. We will use the same case study as Part 1:
+In [our previous post](/2023/04/25/saas-revenue-metrics-part2/), we explored recurring and non-recurring revenue metrics, including ACV, TCV, MRR, and ARR. This post will conclude the series with revenue recognition and cash collection. We will use the same case study as Part 1:
 
 > *For simplicity, we'll assume that we recently built our niche SaaS business: an inventory
 management system for small and mid-sized boat retailers. We picked up the phone and we
