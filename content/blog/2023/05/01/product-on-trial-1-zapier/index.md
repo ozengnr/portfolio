@@ -23,9 +23,12 @@ Zapier allows users to connect web applications and automate workflows. The prim
 ### Website messaging & signup flow (5/5)
 Zapier's home page is simple. The "Zap orange" immediate hits you twice on the page. First, you see the elegant photography of a brand champion, which humanizes the brand. In the site's animated heading, the second orange demonstrates what you can automate. The rotation ever second adds a dynamic look to the brand. It also simple demonstrates many tasks you can do with Zapier. The Pricing page is conveniently placed on the navigation bar.
 
-![Zapier free signup page](zapier1.png) 
+![Zapier's home page](zapier0.png) 
+
 
 The free signup flow is as simple as it gets. On the left hand side, 3 bullet points tells you the following: (1) anybody can use Zapier, (2) core features are free forever, and (3) premium features are free for 14 days. The simple 3-field form asks for a work email, but Zapier also supports signing up with a provider such as Google or Microsoft. I was able to sign up with a Gmail account. Even though non-work emails typically having lower conversion rates from free to paid, allowing "freemail" signups is often a conscious decision by the marketing team to offer a more inclusive top-of-the-funnel approach.
+
+![Zapier free signup page](zapier1.png) 
 
 Once you log in, Zapier asks about your role and your organization size to make better recommendations and collect persona data:
 
