@@ -40,7 +40,7 @@ enableEmoji = true
   googleAnalyticsID = ""
   favicon = "/img/bar-chart-icon.png"
   logo = "/img/bar-chart-icon.png"
-  mainSections = ["blog","contact","about", "project"]
+  mainSections = ["blog","contact","about", "talks", "project"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -127,15 +127,20 @@ enableEmoji = true
     url = "/project/"
     weight = 2    
   [[menu.header]]
+    name = "Talks"
+    title = "Talks"
+    url = "/talk/"
+    weight = 3        
+  [[menu.header]]
     name = "About"
     title = "About"
     url = "/about/"
-    weight = 3    
+    weight = 4    
   [[menu.header]]
     name = "Contact"
     title = "Contact"
     url = "/contact/"
-    weight = 4
+    weight = 5
 
   # Configure footer  
   [[menu.footer]]
