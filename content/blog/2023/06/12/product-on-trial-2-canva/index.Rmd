@@ -1,7 +1,7 @@
 ---
 title: 'Product on Trial #2: Canva'
 author: Oz Guner
-date: '2023-06-12'
+date: '2023-06-11'
 slug: product-on-trial-2-canva
 categories:
   - series
