@@ -1,5 +1,5 @@
 ---
-title: Are paying customers happy customers?
+title: 'Are paying customers happy customers?'
 author: Oz Guner
 date: '2023-06-19'
 slug: are-paying-customers-happy-customers
