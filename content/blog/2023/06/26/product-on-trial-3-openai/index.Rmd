@@ -39,7 +39,7 @@ OpenAI's pricing model is transparent and user-friendly. The only hurdle to over
 
 ![Pricing](3.png)
 
-Additionally, ChatGPT offers both a free plan and a plus plan. The plus plan comes with added benefits like enhanced responsiveness and speed, particularly during times of high demand. And demand for ChatGPT keeps growing.
+ChatGPT also offers both a free plan and a plus plan. The plus plan comes with added benefits like enhanced responsiveness and speed, particularly during times of high demand. And demand for ChatGPT keeps growing.
 
 ### Verdict (18/20)
 
