@@ -8,12 +8,14 @@ categories:
 tags:
   - product on trial
 subtitle: 'Vimeo continues to be a product-led growth success story, helping its users unlock seamless video creation and hosting.'
-excerpt: 'Discover Vimeos product-led growth strategy and user-centric approach to video hosting and sharing. With clear messaging, easy sign-up flow, and intuitive onboarding, Vimeo empowers users to create high-quality videos effortlessly. Though pricing may be a concern for businesses, Vimeo remains a trusted choice for video enthusiasts and professionals.'
+excerpt: 'With clear messaging, easy sign-up flow, and intuitive onboarding, Vimeo empowers users to create high-quality videos effortlessly. Though pricing may be a concern for businesses, Vimeo remains a trusted choice for video enthusiasts and professionals.'
 summary: 'With clear messaging, easy sign-up flow, and intuitive onboarding, Vimeo empowers users to create high-quality videos effortlessly. Though pricing may be a concern for businesses, Vimeo remains a trusted choice for video enthusiasts and professionals.'
 draft: no
 series: ~
 layout: single-sidebar
 ---
+*This is a collaboration with Andrew Barks, the content Design Lead and UX Writer at The Predictive Index. Click [here](https://www.predictiveindex.com/blog/author/andrew-barks/) to catch up with Andrew's work or click [here](https://www.linkedin.com/in/andrew-barks-2758b077/) to connect with him!*
+
 Vimeo, an all-in-one video platform, has embraced a product-led growth strategy that combines video hosting and sharing through a SaaS business model. In this blog post, we will explore how Vimeo's approach to product-led growth, as well as its freemium model and pricing, have made it a go-to platform for video enthusiasts and professionals alike.
 
 ### Website Messaging and Sign-up Flow (3/5)
