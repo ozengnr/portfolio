@@ -2,7 +2,7 @@
 action_label: Read Blog &rarr;
 action_link: /blog
 action_type: text
-description: I am an analytics leader and a go-to-market (GTM) expert. I specialize in GTM support for VC-backed seed-stage firms, designing strategic revenue frameworks that cater to diverse customer segments and competitive landscapes. I am leading revenue and pricing strategy initiatives at The Predictive Index.
+description: I am an analytics leader and a go-to-market (GTM) expert. I deliver expert GTM analytics solutions to early-stage companies that may lack analytics resources, designing strategic revenue frameworks that cater to diverse customer segments and competitive landscapes. I am leading revenue and pricing strategy initiatives at The Predictive Index.
 image_left: true
 images:
 - img/ozportrait.png
