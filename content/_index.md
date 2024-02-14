@@ -2,13 +2,13 @@
 action_label: Read Blog &rarr;
 action_link: /blog
 action_type: text
-description: I am a complexity advisor, a Venturer, and a real-world data practitioner. I love creating informative and insightful data visualizations. I enable businesses to grow by crafting a clear path to success at all levels, from end-users to senior management. I’m currently helping The Predictive Index in its product-led growth journey.
+description: I am an analytics leader, an innovator, and a market dynamics expert. I empower organizations to optimize their revenue potential by implementing scalable pricing strategies that cater to diverse customer segments and competitive landscapes. Currently, I am leading revenue and pricing strategy initiatives at The Predictive Index.
 image_left: true
 images:
 - img/ozportrait.png
 show_action_link: true
 show_social_links: true
-subtitle: Business Intelligence Analyst & Revenue Leader
+subtitle: Pricing & Revenue Expert
 text_align_left: true
 title: Oz Guner
 type: home
