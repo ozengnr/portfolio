@@ -6,11 +6,9 @@ use_featured: false # if false, use most recent by date
 number_categories: 5 # set to zero to exclude
 show_intro: true
 intro: |
-  I'm a business intelligence analyst at [The Predictive Index](https://www.predictiveindex.com/) and I'm working on constructing a product-led funnel for our [talent optimization suite.](https://www.predictiveindex.com/software/hiring/) My original name is `Mustafa Özen Güner` but it's hard to pronounce for many folks, so I go with `Oz Guner` which has a funny story for another day. It's pronounced *`oz-gue-naire`* rather than *`gunner`*. 
-
-  I studied International Relations & American History at Bilkent University in Ankara, Turkey. I've been living in the U.S. since 2017 and I've recently become a naturalized citizen. I have since changed professions and took up what I've loved all along - numbers and quantitative analysis. 
+  I do pricing and strategic finance at [Rapid7](https://www.rapid7.com/). Currently, I'm working on bringing innovative cyber security products to the market and pricing them competitively. 
   
-  I live in Watertown, MA with my wife, Cansu.
+  I've been a naturalized U.S. ctizen and have been living in the U.S. since 2017. I live in Malden, MA with my wife, Cansu.
   
   This blog is built with [`blogdown`](https://github.com/rstudio/blogdown) and [`Hugo`](https://gohugo.io/), and deployed using [`Netlify`](https://www.netlify.com/). My blog posts are released under a [`Creative Commons Attribution-ShareAlike 4.0 International License`](https://creativecommons.org/licenses/by-sa/4.0/).
   
